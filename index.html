@@ -12,8 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
         rel="stylesheet">
-  <script type="module" crossorigin src="/aussie-automation/assets/index-CHbldz9b.js"></script>
-  <link rel="stylesheet" crossorigin href="/aussie-automation/assets/index-CArTvADP.css">
+  <script type="module" crossorigin src="/aussie-automation/assets/index-DGIkccNW.js"></script>
+  <link rel="stylesheet" crossorigin href="/aussie-automation/assets/index-BPLnQ2s0.css">
 </head>
 
 <body>
@@ -106,28 +106,35 @@
                 <div class="demo-info">
                     <span class="sub-header">[ AUDITORY TEST ]</span>
                     <h2>Hear the Difference</h2>
-                    <p>Listen to how our agents handle real-world scenarios. No robotic monotone—just intelligent,
-                        helpful voices.</p>
+                    <p>Listen to real interactions from our active agents. Our system handles everything from urgent
+                        roadside dispatches to complex customer service issues with natural, high-conversion dialogue.
+                    </p>
                     <div class="voice-selector">
-                        <button class="voice-btn active">Dave (Trade/Service)</button>
-                        <button class="voice-btn">Sarah (Corporate)</button>
-                        <button class="voice-btn">Liam (Retail/Booking)</button>
+                        <button class="voice-btn active" onclick="updateDemo('roadside')">Roadside Rescue
+                            (Dispatch)</button>
+                        <button class="voice-btn" onclick="updateDemo('support')">Tech Support (Resolution)</button>
+                        <button class="voice-btn" onclick="updateDemo('booking')">Service Booking (Sales)</button>
                     </div>
                 </div>
                 <div class="player-container">
                     <div class="audio-player">
-                        <div class="waveform-box">
-                            <div class="wave-bar" style="height: 30%;"></div>
-                            <div class="wave-bar" style="height: 50%;"></div>
-                            <div class="wave-bar" style="height: 80%;"></div>
-                            <div class="wave-bar" style="height: 60%;"></div>
-                            <div class="wave-bar" style="height: 90%;"></div>
-                            <div class="wave-bar" style="height: 40%;"></div>
-                            <div class="wave-bar" style="height: 70%;"></div>
+                        <div id="call-summary-box" class="summary-box">
+                            <span class="sub-header">[ CALL ANALYSIS ]</span>
+                            <p id="demo-summary">The user requested a tow truck. The agent confirmed location, vehicle
+                                details (White Subaru XB), ensured no injuries, and dispatched a truck with a 30-45 min
+                                ETA.</p>
+                        </div>
+                        <div id="transcript-box" class="transcript-box">
+                            <div class="transcript-line agent">"Thank you for calling roadside assistance, this is Mike.
+                                Are you in need of a tow truck?"</div>
+                            <div class="transcript-line user">"Yeah, I'm at the McDonald's at Port Meadows, car won't
+                                start."</div>
+                            <div class="transcript-line agent">"I've got that location. Is everyone safe? I'm
+                                dispatching a white Subaru specialist now."</div>
                         </div>
                         <div class="controls">
                             <button id="play-btn">▶ PLAY SAMPLE</button>
-                            <span class="time">00:00 / 00:45</span>
+                            <span class="time">00:00 / 01:24</span>
                         </div>
                     </div>
                 </div>
